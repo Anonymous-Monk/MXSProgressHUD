@@ -1,0 +1,6 @@
+framework module Pods_MXSProgressHUD_Example {
+  umbrella header "Pods-MXSProgressHUD_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

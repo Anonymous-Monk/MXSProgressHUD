@@ -1,0 +1,6 @@
+framework module MXSProgressHUD {
+  umbrella header "MXSProgressHUD-umbrella.h"
+
+  export *
+  module * { export * }
+}

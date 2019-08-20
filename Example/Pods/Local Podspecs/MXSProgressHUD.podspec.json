@@ -1,0 +1,32 @@
+{
+  "name": "MXSProgressHUD",
+  "version": "1.0.0",
+  "summary": "A short description of MXSProgressHUD.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Anonymous-Monk/MXSProgressHUD",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Anonymous-Monk": "15666004981@163.com"
+  },
+  "source": {
+    "git": "https://github.com/Anonymous-Monk/MXSProgressHUD.git",
+    "tag": "1.0.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "MXSProgressHUD/Classes/**/*",
+  "resource_bundles": {
+    "MXSProgressHUD": [
+      "MXSProgressHUD/Assets/*.png"
+    ]
+  },
+  "dependencies": {
+    "MBProgressHUD": [
+
+    ]
+  }
+}
