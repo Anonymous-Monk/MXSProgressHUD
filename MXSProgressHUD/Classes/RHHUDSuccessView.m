@@ -21,9 +21,7 @@
 }
 
 
-
-- (void)setRt_animationType:(RHAnimationType)rh_animationType
-{
+- (void)setRh_animationType:(RHAnimationType)rh_animationType {
     _rh_animationType = rh_animationType;
     [self drawSuccessErrorLine];
 }

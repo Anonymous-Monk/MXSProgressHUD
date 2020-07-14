@@ -11,7 +11,7 @@
 #import <objc/message.h>
 
 CGFloat const delayTime = 1.2;
-#define kLoadImage(name) [UIImage imageNamed:[NSString stringWithFormat:@"RHProgressHUD.bundle/%@", (name)]]
+#define kLoadImage(name) [UIImage imageNamed:[NSString stringWithFormat:@"MXSProgressHUD.bundle/%@", (name)]]
 #define TEXT_SIZE    16.0f
 
 
@@ -114,7 +114,9 @@ NS_INLINE RHProgressHUD *settHUD(UIView *view, NSString *title, BOOL autoHidden)
 +  (void)showInfoMsg:(NSString *)text view:(UIView *)view {
     RHProgressHUD *hud = settHUD(view, text, YES);
     hud.mode = MBProgressHUDModeCustomView;
-    hud.customView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"RH_hud_info@2x.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
+    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+    NSString *path = [bundle pathForResource:@"gt_hud_info@2x.png" ofType:nil inDirectory:@"MXSProgressHUD.bundle"];
+    hud.customView = [[UIImageView alloc] initWithImage:[[UIImage imageWithContentsOfFile:path] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
     //    hud.square = YES;
 }
 
@@ -162,7 +164,9 @@ NS_INLINE RHProgressHUD *settHUD(UIView *view, NSString *title, BOOL autoHidden)
 + (void)showWarningMsg:(NSString *)text view:(UIView *)view {
     RHProgressHUD *hud = settHUD(view, text, YES);
     hud.mode = MBProgressHUDModeCustomView;
-    hud.customView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"RH_hud_warning.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
+    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+    NSString *path = [bundle pathForResource:@"gt_hud_warning@2x.png" ofType:nil inDirectory:@"MXSProgressHUD.bundle"];
+    hud.customView = [[UIImageView alloc] initWithImage:[[UIImage imageWithContentsOfFile:path] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
     hud.square = YES;
 }
 
